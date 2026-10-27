@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neu-bg text-neu-text transition-colors duration-200 antialiased;
+  }
+  .light body {
+    @apply bg-neu-lightBg text-neu-lightText;
+  }
+}
+
+/* Neumorphic Custom Utilities */
+.neu-surface {
+  background: #202431;
+  border-radius: 18px;
+  box-shadow: 7px 7px 16px #131620, -7px -7px 16px #2d3242;
+}
+
+.light .neu-surface {
+  background: #EEF2F9;
+  box-shadow: 6px 6px 14px #c8cdd7, -6px -6px 14px #ffffff;
+}
+
+.neu-inset {
+  background: #202431;
+  border-radius: 18px;
+  box-shadow: inset 5px 5px 10px #131620, inset -5px -5px 10px #2d3242;
+}
+
+.light .neu-inset {
+  background: #EEF2F9;
+  box-shadow: inset 4px 4px 8px #c8cdd7, inset -4px -4px 8px #ffffff;
+}
+
+.neu-button {
+  background: #202431;
+  border-radius: 14px;
+  box-shadow: 4px 4px 9px #131620, -4px -4px 9px #2d3242;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.light .neu-button {
+  background: #EEF2F9;
+  box-shadow: 4px 4px 9px #c8cdd7, -4px -4px 9px #ffffff;
+}
+
+.neu-button:active {
+  box-shadow: inset 4px 4px 8px #131620, inset -4px -4px 8px #2d3242;
+  transform: scale(0.98);
+}
+
+.light .neu-button:active {
+  box-shadow: inset 4px 4px 8px #c8cdd7, inset -4px -4px 8px #ffffff;
+}
+
+.neu-pill {
+  border-radius: 9999px;
+  box-shadow: 3px 3px 6px #131620, -3px -3px 6px #2d3242;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171923;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292F3E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9B8CFF;
+}
